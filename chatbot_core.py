@@ -47,7 +47,6 @@ async def chat_loop(session_id: str, user_message: str) -> str:
     # 4) Execute graph query if needed
     try:
         graph_result_text = ""
-        # graph_instructions = "match (n:Movie) return n limit 10"
         if graph_instructions != "NO_GRAPH_QUERY":
             subgraph = await graph_client.search(graph_instructions)
             
@@ -72,7 +71,6 @@ async def chat_loop(session_id: str, user_message: str) -> str:
     prompt_sections.append(f"User: {user_message}\nAssistant:")
 
     llm_prompt = "\n---\n".join(prompt_sections)
-
     # 6) Call Ollama via generate function
     assistant_response = ollama_generate(llm_prompt)
 
