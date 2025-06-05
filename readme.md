@@ -120,6 +120,11 @@ data/
 └── title.principals.tsv
 ```
 
+Finally, Run this command to generate the collections in neo4j DB:
+```
+python ingest_structured.py
+```
+
 ---
 
 ## 4. Create a `.env` File
