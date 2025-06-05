@@ -1,0 +1,8 @@
+graphiti-core
+zep-python
+pandas
+python-dotenv
+fastapi
+uvicorn
+spacy
+graphiti
